@@ -1,0 +1,8 @@
+dataSource.driverClassName=com.mysql.jdbc.Driver
+dataSource.username=<%= @db_username %>
+dataSource.password=<%= @db_password %>
+# The quickstart guide said to use upgrade for dbCreate, but that
+# was leading to table does not exist errors.  Switching to update
+# seems to have fixed it
+dataSource.dbCreate=update
+dataSource.url=jdbc:mysql://<%= @db_host %>:<%= @db_port %>/lipstick?useUnicode=true&characterEncoding=utf8&autoReconnect=true
